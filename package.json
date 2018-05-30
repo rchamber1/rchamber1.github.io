@@ -1,0 +1,20 @@
+{
+  "name": "personalSite",
+  "version": "1.0.0",
+  "description": "Site to hold my personal portfolio.",
+  "licence": "UNLICENSED",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Ryan Chambers",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rchamber1/personalSite.git"
+  }
+}
