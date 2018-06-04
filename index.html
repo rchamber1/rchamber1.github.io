@@ -11,17 +11,27 @@
 
 <body>
   <h1>Welcome to Ryan Chamber's portfolio!</h1>
-  <button id="secretButton">Reveal Secret</button>
+  <button id="likeButton">Like this Portfolio</button>
+  <button id="resetLikesButton">Reset Likes</button>
   <hr/>
   <div id="secretMessage"></div>
 </body>
-<script type="text/javascript">
-  $(document).ready(() => {
-    console.log("JQuery working!");
-    $("#secretButton").click(() => {
-      console.log("Secret button clicked.");
-      $("#secretMessage").html("I'm a programmer...");
-    });
-  });
+
+<!-- Firebase setup -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDqpTGhm-yBpfh1zrfcjIMAoIG8oKa7Sis",
+    authDomain: "ryanmchambers-personal.firebaseapp.com",
+    databaseURL: "https://ryanmchambers-personal.firebaseio.com",
+    projectId: "ryanmchambers-personal",
+    storageBucket: "",
+    messagingSenderId: "886611489956"
+  };
+  firebase.initializeApp(config);
 </script>
+<!-- End of Firebase setup -->
+
+<script type="text/javascript" src="js/buttons.js"></script>
 </html>
