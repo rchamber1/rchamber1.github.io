@@ -6,8 +6,8 @@ $(document).ready(() => {
   $("#likeButton").click(() => {
     console.log("Like button clicked.");
     if(localStorage.getItem("totalLikes")){
-      let tempVar = parseInt(localStorage.getItem("totalLikes")) + 1;
-      localStorage.setItem("totalLikes", tempVar);
+      const likeIncrement = parseInt(localStorage.getItem("totalLikes")) + 1;
+      localStorage.setItem("totalLikes", likeIncrement);
     }
     else {
       localStorage.setItem("totalLikes", 1);

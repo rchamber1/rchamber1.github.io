@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+#likeButton {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 16px 6px;
+  border-radius: 12px;
+}
