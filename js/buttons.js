@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  console.log("JQuery working!");
+  console.log("jQuery working!");
   $("#secretMessage").hide();
   //const database = firebase.database();
 
