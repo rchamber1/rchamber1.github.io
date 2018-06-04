@@ -1,11 +1,17 @@
 $(document).ready(() => {
   console.log("JQuery working!");
-
   //const database = firebase.database();
 
   $("#likeButton").click(() => {
     console.log("Like button clicked.");
-    $("#secretMessage").html("Thanks for the like!");
+    if(localStorage.getItem("totalLikes")){
+      let tempVar = parseInt(localStorage.getItem("totalLikes")) + 1;
+      localStorage.setItem("totalLikes", tempVar);
+    }
+    else {
+      localStorage.setItem("totalLikes", 1);
+    }
+    $("#secretMessage").html("Thanks for the like! " + localStorage.getItem("totalLikes"));
 
     /* database.ref('likeButton/').once('value', (snapshot) => {
       const data = snapshot.val();
