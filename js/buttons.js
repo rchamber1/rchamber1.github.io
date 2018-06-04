@@ -1,5 +1,6 @@
 $(document).ready(() => {
   console.log("JQuery working!");
+  $("#secretMessage").hide();
   //const database = firebase.database();
 
   $("#likeButton").click(() => {
@@ -11,7 +12,8 @@ $(document).ready(() => {
     else {
       localStorage.setItem("totalLikes", 1);
     }
-    $("#secretMessage").html("Thanks for the like! " + localStorage.getItem("totalLikes"));
+    $("#secretMessage").html("Thanks for the like!");
+    $("#secretMessage").show().delay(1000).fadeOut();
 
     /* database.ref('likeButton/').once('value', (snapshot) => {
       const data = snapshot.val();
