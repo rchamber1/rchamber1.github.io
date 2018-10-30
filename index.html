@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/custom.css">
+
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,18 +29,32 @@
 
   <div class="jumbotron text-center" id="jumbo">
     <h1>Ryan Chambers' Portfolio!</h1>
+    <h2>- &emsp; UX Designer &emsp; * &emsp; Programmer &emsp; -</h2>
   </div>
 
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <button id="likeButton">Like this Portfolio</button>
+        <a href="html/resume.html" id="resumeBtn"><img src="static_files/icons/cartman.svg" style="width:250px;height:250px;"></a>
+        
+        <a href="html/projects.html" id="projectseBtn"><img src="static_files/icons/cartman.svg" style="width:250px;height:250px;"></a>
+        
+        <a href="https://github.com/rchamber1" id="githubBtn"><img src="static_files/icons/cartman.svg" style="width:250px;height:250px;"></a>
+        
+        <!-- <button id="likeButton">Like this Portfolio</button> -->
         <!--<button id="resetLikesButton">Reset Likes</button>-->
       </div>
-      <div class="col-xs-12 text-center">
-        <hr>
-        <div id="secretMessage"></div>
-      </div>
+    </div>
+    <div class="row" id="homeOptions">
+        <div class="col-s-5 text-right">
+            Resume 
+        </div>
+        <div class="col-s-2 text-center">
+            Projects
+        </div>
+        <div class="col-s-5 text-left">
+            Github 
+        </div>
     </div>
   </div>
 
