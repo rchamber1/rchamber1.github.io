@@ -1,37 +1,19 @@
 $(document).ready(() => {
-  console.log("jQuery working!");
-  $("#secretMessage").hide();
-  //const database = firebase.database();
+    console.log("jQuery working!");
 
-  $("#likeButton").click(() => {
-    console.log("Like button clicked.");
-    if(localStorage.getItem("totalLikes")){
-      const likeIncrement = parseInt(localStorage.getItem("totalLikes")) + 1;
-      localStorage.setItem("totalLikes", likeIncrement);
-    }
-    else {
-      localStorage.setItem("totalLikes", 1);
-    }
-    $("#secretMessage").html("Thanks for the like!");
-    $("#secretMessage").show().delay(1000).fadeOut();
+    var toggle = 0;
 
-    /* database.ref('likeButton/').once('value', (snapshot) => {
-      const data = snapshot.val();
-      if(data) {
-        //increment the value
-        const newData = data.totalLikes + 1;
-        database.ref('likeButton').set({totalLikes: newData});
-      }
-      else {
-        // initialze the database location
-        database.ref('likeButton').set({totalLikes: 1});
-      }
-      */
+    $("#toggle-btn").click(() => {
 
+        if(toggle > 0){
+            $(".design-projects").hide();
+            $(".technical-projects").show();
+            toggle = 0;
+        }
+        else{
+            $(".design-projects").show();
+            $(".technical-projects").hide();
+            toggle = 1;
+        }
     });
-
-  /*$("#resetLikesButton").click(() => {
-    database.ref('likeButton/').remove();
-  });*/
-
 });
