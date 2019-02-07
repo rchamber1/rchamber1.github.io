@@ -16,3 +16,8 @@ body {
 #jumbo {
   padding: 1px;
 }
+
+#intro {
+  word-wrap: break-word;
+  max-width: 80%;
+}
